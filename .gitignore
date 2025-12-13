@@ -1,0 +1,4 @@
+Theory/
+__pycache__/
+.DS_Store
+.zed/
