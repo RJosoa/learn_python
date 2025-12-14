@@ -25,14 +25,16 @@ def show_user_information (name , age):
     
     if age == 17:
         print("Pousser un petit peu et vous êtes majeur")
+    elif 12 <= age < 18:
+        print("Vous etes adolescent")
+    elif age == 1 or age == 2:
+        print("Vous etes bebe")
     elif age == 18:
         print("Tout juste majeur: Felicitation !!")
-    elif age == 0:
-        print("Vous venez de naître")
     elif age >= 60:
         print("Vous êtes senior")
     elif age <= 10:
-        print("Vous êtes bébé")
+        print("Vous êtes enfant")
     elif age >= 18:
         print("Vous êtes majeur")
     else :
