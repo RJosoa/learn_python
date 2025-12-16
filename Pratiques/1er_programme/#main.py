@@ -4,17 +4,30 @@ def ask_name():
         name = input("Veuillez renseigner votre nom ")
 
     return name
-        
+
+
 def ask_age(name):
     age = 0
     while age == 0:
         age_str = input(name + ", quel est votre âge : ")
-        try: 
+        try:
             age = int(age_str)
         except ValueError:
             print("Vous devez entrer un nombre")
     return age
-    
+
+
+def ask_size():
+    size = 0
+    while size == 0:
+        size_str = input("Quel est votre taille ? : ")
+        try:
+            size = float(size_str)
+        except ValueError:
+            print("Vous devez entrer un nombre")
+    return size
+
+
 def age_condition(age):
     if age == 17:
         print("Pousser un petit peu et vous êtes majeur")
@@ -30,19 +43,21 @@ def age_condition(age):
         print("Vous êtes enfant")
     elif age >= 18:
         print("Vous êtes majeur")
-    else :
+    else:
         print("Vous êtes mineur")
-    
 
-def show_user_information (name , age):
-    print ()
-    print("Bienvenue "+ name + " !")
-    print ("Vous avez "+ str(age) + " ans.")
+
+def show_user_information(name, age, size, children):
+    print()
+    print("Bienvenue " + name + " !")
+    print("Vous avez " + str(age) + " ans.")
     print("L'année prochaine vous aurez " + str(age + 1) + " ans.")
-    
+    print("Vous mesurez " + str(size) + " m")
+    if children != 0 :
+        print("Vous avez un (des) enfant(s)")
+
     age_condition(age)
 
-        
 
 # ask for name
 # name1 = ask_name()
@@ -60,7 +75,8 @@ NB_PERSON = 1
 
 for i in range(0, NB_PERSON):
     print()
-    print("personne " + str(i+1))
+    print("personne " + str(i + 1))
     name = ask_name()
     age = ask_age(name)
-    show_user_information(name, age)
+    size = ask_size()
+    show_user_information(name, age, size, 0)
