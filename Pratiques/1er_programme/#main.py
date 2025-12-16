@@ -4,8 +4,7 @@ def ask_name():
         name = input("Veuillez renseigner votre nom ")
 
     return name
-    
-    
+        
 def ask_age(name):
     age = 0
     while age == 0:
@@ -16,13 +15,7 @@ def ask_age(name):
             print("Vous devez entrer un nombre")
     return age
     
-
-def show_user_information (name , age):
-    print ()
-    print("Bienvenue "+ name + " !")
-    print ("Vous avez "+ str(age) + " ans.")
-    print("L'année prochaine vous aurez " + str(age + 1) + " ans.")
-    
+def age_condition(age):
     if age == 17:
         print("Pousser un petit peu et vous êtes majeur")
     elif 12 <= age < 18:
@@ -39,19 +32,35 @@ def show_user_information (name , age):
         print("Vous êtes majeur")
     else :
         print("Vous êtes mineur")
+    
+
+def show_user_information (name , age):
+    print ()
+    print("Bienvenue "+ name + " !")
+    print ("Vous avez "+ str(age) + " ans.")
+    print("L'année prochaine vous aurez " + str(age + 1) + " ans.")
+    
+    age_condition(age)
 
         
-    
-
 
 # ask for name
-name1 = ask_name()
-name2 = ask_name()
-    
+# name1 = ask_name()
+# name2 = ask_name()
+
 # ask for age
-age1 = ask_age(name1)
-age2 = ask_age(name2)
+# age1 = ask_age(name1)
+# age2 = ask_age(name2)
 
 # show the result
-show_user_information(name1, age1)
-show_user_information(name2, age2)
+# show_user_information(name1, age1)
+# show_user_information(name2, age2)
+
+NB_PERSON = 1
+
+for i in range(0, NB_PERSON):
+    print()
+    print("personne " + str(i+1))
+    name = ask_name()
+    age = ask_age(name)
+    show_user_information(name, age)
