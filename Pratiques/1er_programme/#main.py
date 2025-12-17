@@ -56,7 +56,7 @@ def show_user_information(name, age, size, children):
     print("Vous mesurez %s m" % (size))
     # s'il y a plusieur valeurs a mettre
     # print("Vous vous appellez %s et vous mesurez %s m" % (name, size ))
-    if children != 0 :
+    if children :
         print("Vous avez un (des) enfant(s)")
 
     age_condition(age)
@@ -82,4 +82,4 @@ for i in range(0, NB_PERSON):
     name = ask_name()
     age = ask_age(name)
     size = ask_size()
-    show_user_information(name, age, size, 0)
+    show_user_information(name, age, size, True)
