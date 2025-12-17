@@ -1,0 +1,1 @@
+Ce programme sert a faire deviner a l'utilisateur le nombre choisis aleatoirement.
