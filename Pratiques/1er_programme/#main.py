@@ -50,9 +50,12 @@ def age_condition(age):
 def show_user_information(name, age, size, children):
     print()
     print("Bienvenue " + name + " !")
+    print(f"Bienvenue {name} !")
     print("Vous avez " + str(age) + " ans.")
     print("L'année prochaine vous aurez " + str(age + 1) + " ans.")
-    print("Vous mesurez " + str(size) + " m")
+    print("Vous mesurez %s m" % (size))
+    # s'il y a plusieur valeurs a mettre
+    # print("Vous vous appellez %s et vous mesurez %s m" % (name, size ))
     if children != 0 :
         print("Vous avez un (des) enfant(s)")
 
