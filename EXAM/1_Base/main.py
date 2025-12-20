@@ -66,11 +66,11 @@ while restart :
     while x == 0 :
         response = input("-> ")
         try : 
-            if response == "o" or response ==  "oui" or response == "o (oui)" or response ==  "o(oui)" :
+            if response == "o" or response ==  "oui" :
                 print("oui")
                 corect = True
                 
-            elif response == "n" or response == "non" or response == "n (non)" or response == "n(non)" :
+            elif response == "n" or response == "non" :
                 print("non")
                 restart = False
                 break

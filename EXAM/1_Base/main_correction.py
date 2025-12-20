@@ -26,7 +26,7 @@ def conversion():
                 
     print()
     
-    value_to_convert = 0.0
+    value_to_convert = 0
     while True:
         print("La valeur à convertir : ")
         value_str = input("-> ")
