@@ -80,8 +80,9 @@ while restart :
                 x = 0
                 print()
         
-        except :
+        except ValueError:
             print("ERROR")   
     
     print()     
     print ("// A bientôt // 👋")
+
